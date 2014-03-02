@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script>
+      $( document ).ready(function() {
+              $( "#restart" ).hide();
+              $( "#time" ).hide();
+          });
+    </script>
+  </head>
+  <body>
+    <p id="time"></p>
+    <table id="table">
+    </table>
+    <div>
+      <button id="start">Start!</button>
+      <form name="character" onsubmit="return(insertChar())">
+        <input id="characterInput" type="text" autocomplete="off" maxlength="1"></input>
+        <input type="submit" value="Submit"></input>
+      </form>
+      <div>
+        <button id="hint" onclick="hint()">Check answers</button>
+        <button id="restart">Restart!</button>
+      </div>
+    </div>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="crossed.js"></script>
+    <script>
+      $("#start").click( function() {
+               start();
+               timer();
+             });
+      $("#restart").click( function() {
+               restart();
+             });
+    </script>
+  </body>
+</html>
