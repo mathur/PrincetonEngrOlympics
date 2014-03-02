@@ -5,14 +5,10 @@ public class ProblemOne {
 
     public int checkColors(String str) {
 		String[] colors = {" red ", " orange ", " yellow ", " green ", " blue ", " purple ", " brown ", " white ", " black ", " silver ", " gold ", " red.", " orange.", " yellow.", " green.", " blue.", " purple.", " brown.", " white.", " black.", " silver.", " gold.", "Red ", "Orange ", "Yellow ", "Green ", "Blue ", "Purple ", "Brown ", "White ", "Black ", "Silver ", "Gold "};
-		Boolean colorFound = false;
 		int numFound = 0;
 		for(int i=0; i < colors.length; i++){
 			if(str.contains(colors[i]))
-				colorFound = true;
-			if(colorFound)
 				numFound++;
-			colorFound = false;
 		}
 		return numFound;
     }
